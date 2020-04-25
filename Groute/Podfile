@@ -7,6 +7,11 @@ target 'Groute' do
 
   # Pods for Groute
   pod 'Firebase/Analytics'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
+  pod 'GoogleSignIn'
+
   target 'GrouteTests' do
     inherit! :search_paths
     # Pods for testing
