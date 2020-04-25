@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class MainViewController: UIViewController, MTMapViewDelegate {
 
@@ -22,6 +23,8 @@ class MainViewController: UIViewController, MTMapViewDelegate {
             mapView.baseMapType = .standard
             self.view.addSubview(mapView)
         }
+        
+        
     }
 }
 
