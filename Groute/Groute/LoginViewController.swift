@@ -22,6 +22,9 @@ class LoginViewController: UIViewController {
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
+        
+        idTextfield.delegate = self
+        passwordTextfield.delegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -82,6 +85,11 @@ extension LoginViewController: GIDSignInDelegate {
             }
         }
     }
-    
-    
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
