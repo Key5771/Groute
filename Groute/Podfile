@@ -11,6 +11,7 @@ target 'Groute' do
   pod 'Firebase/Auth'
   pod 'Firebase/Storage'
   pod 'GoogleSignIn'
+  pod 'Kingfisher' 
 
   target 'GrouteTests' do
     inherit! :search_paths
