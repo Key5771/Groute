@@ -12,6 +12,7 @@
 		EA517EF124540D9D00F32E86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA517EF024540D9D00F32E86 /* ViewController.swift */; };
 		EA54F51B24541BD500663333 /* TourModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA54F51A24541BD500663333 /* TourModel.swift */; };
 		EABF08FB2456ACC900519E79 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABF08FA2456ACC900519E79 /* MainTableViewCell.swift */; };
+		EABF08FD2456C33E00519E79 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABF08FC2456C33E00519E79 /* LoginViewController.swift */; };
 		EAD7AD40243C3AC600B63AE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD7AD3F243C3AC600B63AE7 /* AppDelegate.swift */; };
 		EAD7AD42243C3AC600B63AE7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD7AD41243C3AC600B63AE7 /* SceneDelegate.swift */; };
 		EAD7AD44243C3AC600B63AE7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD7AD43243C3AC600B63AE7 /* MainViewController.swift */; };
@@ -64,6 +65,7 @@
 		EA517EF024540D9D00F32E86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EA54F51A24541BD500663333 /* TourModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourModel.swift; sourceTree = "<group>"; };
 		EABF08FA2456ACC900519E79 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		EABF08FC2456C33E00519E79 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EAD7AD3C243C3AC600B63AE7 /* Groute.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Groute.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAD7AD3F243C3AC600B63AE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAD7AD41243C3AC600B63AE7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 				EA517EF024540D9D00F32E86 /* ViewController.swift */,
 				EA54F51A24541BD500663333 /* TourModel.swift */,
 				EABF08FA2456ACC900519E79 /* MainTableViewCell.swift */,
+				EABF08FC2456C33E00519E79 /* LoginViewController.swift */,
 			);
 			path = Groute;
 			sourceTree = "<group>";
@@ -592,6 +595,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EABF08FD2456C33E00519E79 /* LoginViewController.swift in Sources */,
 				EAD7AD44243C3AC600B63AE7 /* MainViewController.swift in Sources */,
 				EAD7AD40243C3AC600B63AE7 /* AppDelegate.swift in Sources */,
 				EA54F51B24541BD500663333 /* TourModel.swift in Sources */,
