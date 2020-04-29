@@ -16,22 +16,42 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var idTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
     
+    func changeView(){
+        let viewController: UIViewController = self.storyboard!.instantiateViewController(withIdentifier: "navigation")
+        viewController.modalPresentationStyle = .overFullScreen
+        self.present(viewController, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let getSavedidinfo = UserDefaults.standard.string(forKey: "savedId")
+
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
         
         idTextfield.delegate = self
         passwordTextfield.delegate = self
-
+        Auth.auth().signIn(withEmail: idTextfield.text!, password: passwordTextfield.text!) { (user, error) in
+            if getSavedidinfo != nil {
+                 print(getSavedidinfo)
+                let viewController: UIViewController = self.storyboard!.instantiateViewController(withIdentifier: "navigation")
+                viewController.modalPresentationStyle = .overFullScreen
+                self.present(viewController, animated: true, completion: nil)
+            }
+        }
+//        if getSavedidinfo != nil{
+//
+//            changeView()
+//        }
         // Do any additional setup after loading the view.
+        
     }
     
     @IBAction func loginButtonClick(_ sender: Any) {
         Auth.auth().signIn(withEmail: idTextfield.text!, password: passwordTextfield.text!) { (user, error) in
             if user != nil {
+                UserDefaults.standard.set(self.idTextfield.text, forKey: "savedId")
                 let viewController: UIViewController = self.storyboard!.instantiateViewController(withIdentifier: "navigation")
                 viewController.modalPresentationStyle = .overFullScreen
                 self.present(viewController, animated: true, completion: nil)
@@ -47,6 +67,8 @@ class LoginViewController: UIViewController {
             }
         }
     }
+    
+    
     /*
     // MARK: - Navigation
 
