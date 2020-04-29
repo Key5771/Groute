@@ -62,6 +62,8 @@ class SignupViewController: UIViewController {
         signUp(email: emailTextField.text!, password: passwordTextfield.text!)
     }
     
+    
+    // TODO: Signup
     func signUp(email: String, password: String) {
         let db = Firestore.firestore()
         
@@ -95,7 +97,10 @@ class SignupViewController: UIViewController {
                     
                     let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
                     let okButton = UIAlertAction(title: "확인", style: .default, handler: { (_) in
-                        self.dismiss(animated: true, completion: nil)
+                        UserDefaults.standard.set(self.emailTextField.text, forKey: "savedId")
+                        let viewController: UIViewController = self.storyboard!.instantiateViewController(withIdentifier: "navigation")
+                        viewController.modalPresentationStyle = .overFullScreen
+                        self.present(viewController, animated: true, completion: nil)
                     })
                     alertController.addAction(okButton)
                     self.present(alertController, animated: true, completion: nil)
