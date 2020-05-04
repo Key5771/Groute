@@ -10,6 +10,7 @@ import UIKit
 
 class UserSettingController: UIViewController {
 
+    @IBOutlet weak var userNickname: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -137,6 +137,47 @@
             </objects>
             <point key="canvasLocation" x="-3786" y="80"/>
         </scene>
+        <!--Set Nickname View Controller-->
+        <scene sceneID="UJY-hS-mCz">
+            <objects>
+                <viewController storyboardIdentifier="setNickname" id="yaF-Uw-Z1w" customClass="SetNicknameViewController" customModule="Groute" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ubk-tY-XVl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="닉네임을 설정해주세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQj-HD-Ck4">
+                                <rect key="frame" x="93" y="143" width="229" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i7C-HE-3R0">
+                                <rect key="frame" x="93" y="608" width="229" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oo8-Ek-Dnv">
+                                <rect key="frame" x="364" y="610" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="확인"/>
+                                <connections>
+                                    <action selector="setNickname:" destination="yaF-Uw-Z1w" eventType="touchUpInside" id="IwI-w8-vgb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="rGf-SF-DrR"/>
+                    </view>
+                    <connections>
+                        <outlet property="nickTextField" destination="i7C-HE-3R0" id="Vqs-2a-4MR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="npm-RM-zsj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2886" y="80"/>
+        </scene>
         <!--Groute Login-->
         <scene sceneID="Fxq-mh-LZB">
             <objects>
@@ -303,11 +344,21 @@
                                     <action selector="logoutButton:" destination="4lT-RP-Nvf" eventType="touchUpInside" id="xmw-jl-Mq4"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VgI-Pr-veS">
+                                <rect key="frame" x="186" y="176" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="t6P-hE-WQN"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="profile" id="qsd-iW-EbD"/>
+                    <connections>
+                        <outlet property="userNickname" destination="VgI-Pr-veS" id="TDK-yA-6WH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yPU-Jb-kjm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
