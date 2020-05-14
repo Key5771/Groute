@@ -62,6 +62,8 @@ class SignupViewController: UIViewController {
         signUp(email: emailTextField.text!, password: passwordTextfield.text!)
     }
     
+    
+    // TODO: Signup
     func signUp(email: String, password: String) {
         let db = Firestore.firestore()
         
@@ -83,9 +85,11 @@ class SignupViewController: UIViewController {
                     }
                 }
             } else {
-                self.ref = db.collection("User").addDocument(data: [
-                    "Email": self.emailTextField.text ?? ""
-                ]) { err in
+                db.collection("User").document(self.emailTextField.text!).setData([
+                    "Email": self.emailTextField.text ?? "",
+                    "ExistNickname": "false"
+                ])
+                { err in
                     var alertTitle = "회원가입 완료"
                     var alertMessage = "회원가입이 완료되었습니다."
                     if err != nil {
@@ -95,7 +99,10 @@ class SignupViewController: UIViewController {
                     
                     let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
                     let okButton = UIAlertAction(title: "확인", style: .default, handler: { (_) in
-                        self.dismiss(animated: true, completion: nil)
+                        UserDefaults.standard.set(self.emailTextField.text, forKey: "savedId") // Save userId for autologin
+                        let viewController: UIViewController = self.storyboard!.instantiateViewController(withIdentifier: "setNickname") // Go to Nickname view
+                        viewController.modalPresentationStyle = .overFullScreen
+                        self.present(viewController, animated: true, completion: nil)
                     })
                     alertController.addAction(okButton)
                     self.present(alertController, animated: true, completion: nil)

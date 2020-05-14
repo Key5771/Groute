@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0DD84D8CECB50915E8A6529B /* Pods_Groute_GrouteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3562A0E2E440E4C1B849A9B /* Pods_Groute_GrouteUITests.framework */; };
 		1D6983940A3AEF0E34F8CDDE /* Pods_GrouteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05BCDCC47B52B47F23CE80D6 /* Pods_GrouteTests.framework */; };
+		B55B679324582804003736D9 /* UserSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55B679224582804003736D9 /* UserSettingController.swift */; };
+		B5DBD270245C182300BED602 /* SetNicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DBD26F245C182300BED602 /* SetNicknameViewController.swift */; };
 		EA517EF124540D9D00F32E86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA517EF024540D9D00F32E86 /* ViewController.swift */; };
 		EA54F51B24541BD500663333 /* TourModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA54F51A24541BD500663333 /* TourModel.swift */; };
 		EABF08FB2456ACC900519E79 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABF08FA2456ACC900519E79 /* MainTableViewCell.swift */; };
@@ -22,7 +24,6 @@
 		EAD7AD4C243C3ACC00B63AE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAD7AD4A243C3ACC00B63AE7 /* LaunchScreen.storyboard */; };
 		EAD7AD57243C3ACD00B63AE7 /* GrouteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD7AD56243C3ACD00B63AE7 /* GrouteTests.swift */; };
 		EAD7AD62243C3ACD00B63AE7 /* GrouteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD7AD61243C3ACD00B63AE7 /* GrouteUITests.swift */; };
-		EAD7AD73243C44AB00B63AE7 /* DaumMap.embeddedframework in Resources */ = {isa = PBXBuildFile; fileRef = EAD7AD72243C44AB00B63AE7 /* DaumMap.embeddedframework */; };
 		EAD7AD74243C44AB00B63AE7 /* DaumMap.embeddedframework in Resources */ = {isa = PBXBuildFile; fileRef = EAD7AD72243C44AB00B63AE7 /* DaumMap.embeddedframework */; };
 		EAD7ADA1243C45AA00B63AE7 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD7ADA0243C45AA00B63AE7 /* OpenGLES.framework */; };
 		EAD7ADA3243C464A00B63AE7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD7ADA2243C464A00B63AE7 /* SystemConfiguration.framework */; };
@@ -63,6 +64,8 @@
 		9DBBDFCB57357F5F26F0FD24 /* Pods-Groute.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Groute.release.xcconfig"; path = "Target Support Files/Pods-Groute/Pods-Groute.release.xcconfig"; sourceTree = "<group>"; };
 		A3562A0E2E440E4C1B849A9B /* Pods_Groute_GrouteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Groute_GrouteUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A53CE80052D854CDFED1155A /* Pods-GrouteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrouteTests.debug.xcconfig"; path = "Target Support Files/Pods-GrouteTests/Pods-GrouteTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B55B679224582804003736D9 /* UserSettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingController.swift; sourceTree = "<group>"; };
+		B5DBD26F245C182300BED602 /* SetNicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNicknameViewController.swift; sourceTree = "<group>"; };
 		EA517EF024540D9D00F32E86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EA54F51A24541BD500663333 /* TourModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourModel.swift; sourceTree = "<group>"; };
 		EABF08FA2456ACC900519E79 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
@@ -220,6 +223,8 @@
 				EABF08FA2456ACC900519E79 /* MainTableViewCell.swift */,
 				EABF08FC2456C33E00519E79 /* LoginViewController.swift */,
 				EABF08FE2456D8DB00519E79 /* SignupViewController.swift */,
+				B55B679224582804003736D9 /* UserSettingController.swift */,
+				B5DBD26F245C182300BED602 /* SetNicknameViewController.swift */,
 			);
 			path = Groute;
 			sourceTree = "<group>";
@@ -431,7 +436,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAD7AD73243C44AB00B63AE7 /* DaumMap.embeddedframework in Resources */,
 				EAD7AD4C243C3ACC00B63AE7 /* LaunchScreen.storyboard in Resources */,
 				EAD7ADB1243C728C00B63AE7 /* GoogleService-Info.plist in Resources */,
 				EAD7AD49243C3ACC00B63AE7 /* Assets.xcassets in Resources */,
@@ -598,10 +602,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B55B679324582804003736D9 /* UserSettingController.swift in Sources */,
 				EABF08FD2456C33E00519E79 /* LoginViewController.swift in Sources */,
 				EAD7AD44243C3AC600B63AE7 /* MainViewController.swift in Sources */,
 				EABF08FF2456D8DB00519E79 /* SignupViewController.swift in Sources */,
 				EAD7AD40243C3AC600B63AE7 /* AppDelegate.swift in Sources */,
+				B5DBD270245C182300BED602 /* SetNicknameViewController.swift in Sources */,
 				EA54F51B24541BD500663333 /* TourModel.swift in Sources */,
 				EA517EF124540D9D00F32E86 /* ViewController.swift in Sources */,
 				EABF08FB2456ACC900519E79 /* MainTableViewCell.swift in Sources */,
@@ -710,7 +716,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -764,7 +770,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -780,7 +786,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U53BLS7M93;
+				DEVELOPMENT_TEAM = M82N55553U;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DaumMap.embeddedframework",
@@ -804,7 +810,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U53BLS7M93;
+				DEVELOPMENT_TEAM = M82N55553U;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DaumMap.embeddedframework",
