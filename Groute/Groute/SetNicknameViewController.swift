@@ -34,7 +34,7 @@ class SetNicknameViewController: UIViewController {
                             "ExistNickname": "true"
                         ]) { err in
                             if let err = err {
-                                print("Error \(err)")
+                                print("Error: \(err)")
                             } else {
                                 print("Document successfully written!")
                             }
