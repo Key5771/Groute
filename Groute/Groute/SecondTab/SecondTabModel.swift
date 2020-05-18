@@ -10,7 +10,8 @@ import Foundation
 
 
 struct SecondTabModel {
-    var When: String?
+    var Time: String?
     var address: String?
     var imageAddress: String?
 }
+

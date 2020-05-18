@@ -38,8 +38,8 @@ class SecondTabViewController: UIViewController {
             } else {
                 self.secondTabList = []
                 for document in querySnapshot!.documents {
-                    let Testone : SecondTabModel = SecondTabModel(When: document.get("When") as? String, address: document.get("address") as? String, imageAddress: document.get("imageAddress") as? String)
-            self.secondTabList.append(Testone)
+                    let getInfo : SecondTabModel = SecondTabModel(Time: document.get("Time") as? String, address: document.get("Address") as? String, imageAddress: document.get("imageAddress") as? String)
+            self.secondTabList.append(getInfo)
                 }
                 self.secondTableview.reloadData()
             }
@@ -64,16 +64,12 @@ extension SecondTabViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "secondTabCell", for: indexPath) as! SecondTabTableViewCell
-        let url = URL(string: secondTabList[indexPath.row].imageAddress!)
-        cell.When.text = secondTabList[indexPath.row].When!
-        cell.addressName.text = secondTabList[indexPath.row].address!
-        cell.routeImage.kf.setImage(with: url)
-        cell.routeImage.layer.cornerRadius = cell.routeImage.frame.height / 2
-        cell.routeImage.layer.borderWidth = 1
-        cell.routeImage.layer.borderColor = UIColor.clear.cgColor
-        cell.routeImage.clipsToBounds = true
-        cell.addressName.sizeToFit()
-        cell.When.sizeToFit()
+            let url = URL(string: secondTabList[indexPath.row].imageAddress!)
+            cell.Time.text = secondTabList[indexPath.row].Time!
+            cell.addressName.text = secondTabList[indexPath.row].address!
+            cell.routeImage.kf.setImage(with: url)
+        cell.backgroundColor = UIColor.white
+        cell.layer.borderColor = UIColor.white.cgColor
         return cell
     }
 }

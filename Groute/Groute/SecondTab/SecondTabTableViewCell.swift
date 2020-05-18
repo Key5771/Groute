@@ -12,11 +12,16 @@ class SecondTabTableViewCell: UITableViewCell {
 
     @IBOutlet weak var routeImage: UIImageView!
     @IBOutlet weak var addressName: UILabel!
-    @IBOutlet weak var When: UILabel!
+    @IBOutlet weak var Time: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        routeImage.layer.cornerRadius = routeImage.frame.height / 2
+        routeImage.layer.borderWidth = 1
+        routeImage.layer.borderColor = UIColor.clear.cgColor
+        routeImage.clipsToBounds = true
+        addressName.sizeToFit()
+        Time.sizeToFit()
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
