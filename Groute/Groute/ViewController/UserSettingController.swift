@@ -29,10 +29,8 @@ class UserSettingController: UIViewController {
     }
     
     func logout(){
-         UserDefaults.standard.set(nil, forKey: "savedId")
-        let viewController: UIViewController = self.storyboard!.instantiateViewController(withIdentifier: "LoginViewController")
-        viewController.modalPresentationStyle = .overFullScreen
-        self.present(viewController, animated: true, completion: nil)
+        UserDefaults.standard.set(nil, forKey: "savedId")
+        navigationController?.dismiss(animated: true, completion: nil)
     }
     
     
