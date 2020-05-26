@@ -189,14 +189,36 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		B58406312471653E00DB89F3 /* SecondTab */ = {
+		B58406312471653E00DB89F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA54F51A24541BD500663333 /* TourModel.swift */,
+				B584062F2471653300DB89F3 /* SecondTabModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA4440A6247D28C2002F5D10 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				B50DA272246E83A400430811 /* SecondTabViewController.swift */,
-				B584062D2471454700DB89F3 /* SecondTabTableViewCell.swift */,
-				B584062F2471653300DB89F3 /* SecondTabModel.swift */,
+				B5DBD26F245C182300BED602 /* SetNicknameViewController.swift */,
+				B55B679224582804003736D9 /* UserSettingController.swift */,
+				EABF08FE2456D8DB00519E79 /* SignupViewController.swift */,
+				EABF08FC2456C33E00519E79 /* LoginViewController.swift */,
+				EA517EF024540D9D00F32E86 /* ViewController.swift */,
+				EAD7AD43243C3AC600B63AE7 /* MainViewController.swift */,
 			);
-			path = SecondTab;
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EA4440A7247D28DF002F5D10 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B584062D2471454700DB89F3 /* SecondTabTableViewCell.swift */,
+				EABF08FA2456ACC900519E79 /* MainTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		EAD7AD33243C3AC600B63AE7 = {
@@ -224,8 +246,9 @@
 		EAD7AD3E243C3AC600B63AE7 /* Groute */ = {
 			isa = PBXGroup;
 			children = (
-				B58406312471653E00DB89F3 /* SecondTab */,
-				EAD7AD43243C3AC600B63AE7 /* MainViewController.swift */,
+				EA4440A7247D28DF002F5D10 /* Cell */,
+				EA4440A6247D28C2002F5D10 /* ViewController */,
+				B58406312471653E00DB89F3 /* Model */,
 				EAD7AD72243C44AB00B63AE7 /* DaumMap.embeddedframework */,
 				EAD7AD3F243C3AC600B63AE7 /* AppDelegate.swift */,
 				EAD7AD41243C3AC600B63AE7 /* SceneDelegate.swift */,
@@ -235,13 +258,6 @@
 				EAD7AD4D243C3ACC00B63AE7 /* Info.plist */,
 				EAD7ADB0243C728C00B63AE7 /* GoogleService-Info.plist */,
 				EAD7ADAF243C608A00B63AE7 /* Groute-Bridging-Header.h */,
-				EA517EF024540D9D00F32E86 /* ViewController.swift */,
-				EA54F51A24541BD500663333 /* TourModel.swift */,
-				EABF08FA2456ACC900519E79 /* MainTableViewCell.swift */,
-				EABF08FC2456C33E00519E79 /* LoginViewController.swift */,
-				EABF08FE2456D8DB00519E79 /* SignupViewController.swift */,
-				B55B679224582804003736D9 /* UserSettingController.swift */,
-				B5DBD26F245C182300BED602 /* SetNicknameViewController.swift */,
 			);
 			path = Groute;
 			sourceTree = "<group>";
