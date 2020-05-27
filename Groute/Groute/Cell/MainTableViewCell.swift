@@ -12,6 +12,7 @@ class MainTableViewCell: UITableViewCell {
     @IBOutlet weak var locationImageView: UIImageView!
     @IBOutlet weak var locationName: UILabel!
     @IBOutlet weak var locationAddress: UILabel!
+    @IBOutlet weak var favoriteCountLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

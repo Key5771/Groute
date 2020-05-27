@@ -39,7 +39,7 @@ class SecondTabViewController: UIViewController {
                 self.secondTabList = []
                 for document in querySnapshot!.documents {
                     let getInfo : SecondTabModel = SecondTabModel(Time: document.get("Time") as? String, address: document.get("Address") as? String, imageAddress: document.get("imageAddress") as? String)
-            self.secondTabList.append(getInfo)
+                    self.secondTabList.append(getInfo)
                 }
                 self.secondTableview.reloadData()
             }

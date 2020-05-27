@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z8N-QF-CC6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z8N-QF-CC6">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -518,8 +518,14 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDM-ta-tMu">
-                                                    <rect key="frame" x="16" y="171" width="382" height="21"/>
+                                                    <rect key="frame" x="16" y="171" width="198" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2m-6e-xtw">
+                                                    <rect key="frame" x="314" y="178.5" width="84" height="13.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -527,17 +533,21 @@
                                             <constraints>
                                                 <constraint firstItem="U2p-Qf-5PY" firstAttribute="top" secondItem="9yz-Dc-VBr" secondAttribute="topMargin" id="6z4-qx-3De"/>
                                                 <constraint firstItem="4QH-ur-tkH" firstAttribute="top" secondItem="U2p-Qf-5PY" secondAttribute="bottom" constant="8" id="ASF-3s-tU9"/>
+                                                <constraint firstItem="k2m-6e-xtw" firstAttribute="leading" secondItem="iDM-ta-tMu" secondAttribute="trailing" constant="100" id="Ioh-dk-bMm"/>
                                                 <constraint firstItem="iDM-ta-tMu" firstAttribute="leading" secondItem="9yz-Dc-VBr" secondAttribute="leading" constant="16" id="JZx-Q0-1Q3"/>
                                                 <constraint firstItem="U2p-Qf-5PY" firstAttribute="leading" secondItem="9yz-Dc-VBr" secondAttribute="leadingMargin" id="JeW-Ld-lOx"/>
                                                 <constraint firstAttribute="trailing" secondItem="4QH-ur-tkH" secondAttribute="trailing" constant="16" id="PVG-ql-ZuB"/>
-                                                <constraint firstAttribute="trailing" secondItem="iDM-ta-tMu" secondAttribute="trailing" constant="16" id="UWB-aw-FRr"/>
+                                                <constraint firstAttribute="trailing" secondItem="iDM-ta-tMu" secondAttribute="trailing" constant="200" id="UWB-aw-FRr"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="U2p-Qf-5PY" secondAttribute="trailing" id="YSm-UA-zQn"/>
                                                 <constraint firstItem="iDM-ta-tMu" firstAttribute="top" secondItem="4QH-ur-tkH" secondAttribute="bottom" constant="8" id="Z41-55-Xew"/>
                                                 <constraint firstItem="4QH-ur-tkH" firstAttribute="leading" secondItem="9yz-Dc-VBr" secondAttribute="leading" constant="16" id="bSA-3X-1Zf"/>
+                                                <constraint firstAttribute="bottom" secondItem="k2m-6e-xtw" secondAttribute="bottom" constant="8" id="fk6-O1-Ee2"/>
                                                 <constraint firstAttribute="bottom" secondItem="iDM-ta-tMu" secondAttribute="bottom" constant="8" id="fyy-dE-O1G"/>
+                                                <constraint firstAttribute="trailing" secondItem="k2m-6e-xtw" secondAttribute="trailing" constant="16" id="g0r-pC-Zb4"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="favoriteCountLabel" destination="k2m-6e-xtw" id="eY6-7w-2yk"/>
                                             <outlet property="locationAddress" destination="iDM-ta-tMu" id="Ex8-Dy-dcR"/>
                                             <outlet property="locationImageView" destination="U2p-Qf-5PY" id="ZFV-6t-2r4"/>
                                             <outlet property="locationName" destination="4QH-ur-tkH" id="jYp-96-l52"/>
