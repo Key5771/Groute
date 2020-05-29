@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Kingfisher
 
 class ContentViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!

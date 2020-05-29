@@ -23,7 +23,7 @@
 		EABF08FF2456D8DB00519E79 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABF08FE2456D8DB00519E79 /* SignupViewController.swift */; };
 		EAD7AD40243C3AC600B63AE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD7AD3F243C3AC600B63AE7 /* AppDelegate.swift */; };
 		EAD7AD42243C3AC600B63AE7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD7AD41243C3AC600B63AE7 /* SceneDelegate.swift */; };
-		EAD7AD44243C3AC600B63AE7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD7AD43243C3AC600B63AE7 /* MainViewController.swift */; };
+		EAD7AD44243C3AC600B63AE7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD7AD43243C3AC600B63AE7 /* MapViewController.swift */; };
 		EAD7AD47243C3AC600B63AE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAD7AD45243C3AC600B63AE7 /* Main.storyboard */; };
 		EAD7AD49243C3ACC00B63AE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAD7AD48243C3ACC00B63AE7 /* Assets.xcassets */; };
 		EAD7AD4C243C3ACC00B63AE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAD7AD4A243C3ACC00B63AE7 /* LaunchScreen.storyboard */; };
@@ -84,7 +84,7 @@
 		EAD7AD3C243C3AC600B63AE7 /* Groute.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Groute.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAD7AD3F243C3AC600B63AE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAD7AD41243C3AC600B63AE7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EAD7AD43243C3AC600B63AE7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		EAD7AD43243C3AC600B63AE7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		EAD7AD46243C3AC600B63AE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EAD7AD48243C3ACC00B63AE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EAD7AD4B243C3ACC00B63AE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -212,7 +212,7 @@
 				EABF08FE2456D8DB00519E79 /* SignupViewController.swift */,
 				EABF08FC2456C33E00519E79 /* LoginViewController.swift */,
 				EA517EF024540D9D00F32E86 /* ViewController.swift */,
-				EAD7AD43243C3AC600B63AE7 /* MainViewController.swift */,
+				EAD7AD43243C3AC600B63AE7 /* MapViewController.swift */,
 				EAB3410524810C06009EAF80 /* ContentViewController.swift */,
 			);
 			path = ViewController;
@@ -644,7 +644,7 @@
 				B55B679324582804003736D9 /* UserSettingController.swift in Sources */,
 				B584062E2471454700DB89F3 /* SecondTabTableViewCell.swift in Sources */,
 				EABF08FD2456C33E00519E79 /* LoginViewController.swift in Sources */,
-				EAD7AD44243C3AC600B63AE7 /* MainViewController.swift in Sources */,
+				EAD7AD44243C3AC600B63AE7 /* MapViewController.swift in Sources */,
 				EABF08FF2456D8DB00519E79 /* SignupViewController.swift in Sources */,
 				EA4440A9247D335E002F5D10 /* RouteModel.swift in Sources */,
 				EAD7AD40243C3AC600B63AE7 /* AppDelegate.swift in Sources */,

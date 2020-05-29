@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class MainViewController: UIViewController, MTMapViewDelegate {
+class MapViewController: UIViewController, MTMapViewDelegate {
 
     var mapView: MTMapView?
 
