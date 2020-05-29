@@ -84,6 +84,8 @@ class LoginViewController: UIViewController {
                 let viewController: UIViewController = self.storyboard!.instantiateViewController(withIdentifier: "navigation")
                 viewController.modalPresentationStyle = .overFullScreen
                 self.present(viewController, animated: true, completion: nil)
+                self.idTextfield.text = ""
+                self.passwordTextfield.text = ""
             } else {
                 let alertController = UIAlertController(title: "로그인 실패", message: "아이디 또는 패스워드를 확인하여주세요.", preferredStyle: .alert)
                 let okButton = UIAlertAction(title: "확인", style: .default, handler: nil)

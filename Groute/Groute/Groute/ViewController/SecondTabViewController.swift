@@ -14,17 +14,13 @@ import Kingfisher
 
 class SecondTabViewController: UIViewController {
     
+
     @IBOutlet weak var secondTableview: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         secondTableview.delegate = self
         secondTableview.dataSource = self
-    }
-    @IBAction func goToSearchView(_ sender: Any) {
-        let viewController: UIViewController = self.storyboard!.instantiateViewController(withIdentifier: "SearchViewController")
-        viewController.modalPresentationStyle = .overFullScreen
-        self.present(viewController, animated: true, completion: nil)
     }
     let db = Firestore.firestore()
     let firebaseAuth = Auth.auth()
@@ -50,6 +46,14 @@ class SecondTabViewController: UIViewController {
             }
         }
     }
+    
+    
+    @IBAction func goTosearch(_ sender: Any) {
+        let viewController: UIViewController = self.storyboard!.instantiateViewController(withIdentifier: "searchCity")
+        viewController.modalPresentationStyle = .overFullScreen
+        self.present(viewController, animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

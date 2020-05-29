@@ -54,7 +54,7 @@ class ViewController: UIViewController {
     }
     
     
-    // TODO : Segment Control
+    // TODO: - Segment Control
     @IBAction func segmentSelect(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             // 이 부분은 HOT Segment에 관한 코드를 남기면 됩니다.
@@ -79,7 +79,7 @@ class ViewController: UIViewController {
 }
 
 
-// MARK : UITableViewController Control
+// MARK: - UITableViewController
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tourList.count

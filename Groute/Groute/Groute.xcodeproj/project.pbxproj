@@ -10,6 +10,9 @@
 		0DD84D8CECB50915E8A6529B /* Pods_Groute_GrouteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3562A0E2E440E4C1B849A9B /* Pods_Groute_GrouteUITests.framework */; };
 		1D6983940A3AEF0E34F8CDDE /* Pods_GrouteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05BCDCC47B52B47F23CE80D6 /* Pods_GrouteTests.framework */; };
 		B50DA273246E83A400430811 /* SecondTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50DA272246E83A400430811 /* SecondTabViewController.swift */; };
+		B51619A6247F4C82006315CD /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51619A5247F4C82006315CD /* SearchViewController.swift */; };
+		B51619A8247F53EF006315CD /* SeachCityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51619A7247F53EF006315CD /* SeachCityCell.swift */; };
+		B51619AA247F569A006315CD /* SearchCityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51619A9247F569A006315CD /* SearchCityModel.swift */; };
 		B55B679324582804003736D9 /* UserSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55B679224582804003736D9 /* UserSettingController.swift */; };
 		B584062E2471454700DB89F3 /* SecondTabTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584062D2471454700DB89F3 /* SecondTabTableViewCell.swift */; };
 		B58406302471653300DB89F3 /* SecondTabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584062F2471653300DB89F3 /* SecondTabModel.swift */; };
@@ -68,6 +71,9 @@
 		A3562A0E2E440E4C1B849A9B /* Pods_Groute_GrouteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Groute_GrouteUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A53CE80052D854CDFED1155A /* Pods-GrouteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrouteTests.debug.xcconfig"; path = "Target Support Files/Pods-GrouteTests/Pods-GrouteTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B50DA272246E83A400430811 /* SecondTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTabViewController.swift; sourceTree = "<group>"; };
+		B51619A5247F4C82006315CD /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		B51619A7247F53EF006315CD /* SeachCityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeachCityCell.swift; sourceTree = "<group>"; };
+		B51619A9247F569A006315CD /* SearchCityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCityModel.swift; sourceTree = "<group>"; };
 		B55B679224582804003736D9 /* UserSettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingController.swift; sourceTree = "<group>"; };
 		B584062D2471454700DB89F3 /* SecondTabTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTabTableViewCell.swift; sourceTree = "<group>"; };
 		B584062F2471653300DB89F3 /* SecondTabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTabModel.swift; sourceTree = "<group>"; };
@@ -189,21 +195,39 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		B5504E76247613940018C2AD /* SearchbarView */ = {
+		B58406312471653E00DB89F3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EA54F51A24541BD500663333 /* TourModel.swift */,
+				B584062F2471653300DB89F3 /* SecondTabModel.swift */,
+				B51619A9247F569A006315CD /* SearchCityModel.swift */,
 			);
-			path = SearchbarView;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		B58406312471653E00DB89F3 /* SecondTab */ = {
+		EA4440A6247D28C2002F5D10 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				B51619A5247F4C82006315CD /* SearchViewController.swift */,
 				B50DA272246E83A400430811 /* SecondTabViewController.swift */,
-				B584062D2471454700DB89F3 /* SecondTabTableViewCell.swift */,
-				B584062F2471653300DB89F3 /* SecondTabModel.swift */,
+				B5DBD26F245C182300BED602 /* SetNicknameViewController.swift */,
+				B55B679224582804003736D9 /* UserSettingController.swift */,
+				EABF08FE2456D8DB00519E79 /* SignupViewController.swift */,
+				EABF08FC2456C33E00519E79 /* LoginViewController.swift */,
+				EA517EF024540D9D00F32E86 /* ViewController.swift */,
+				EAD7AD43243C3AC600B63AE7 /* MainViewController.swift */,
 			);
-			path = SecondTab;
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EA4440A7247D28DF002F5D10 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B584062D2471454700DB89F3 /* SecondTabTableViewCell.swift */,
+				EABF08FA2456ACC900519E79 /* MainTableViewCell.swift */,
+				B51619A7247F53EF006315CD /* SeachCityCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		EAD7AD33243C3AC600B63AE7 = {
@@ -231,9 +255,9 @@
 		EAD7AD3E243C3AC600B63AE7 /* Groute */ = {
 			isa = PBXGroup;
 			children = (
-				B5504E76247613940018C2AD /* SearchbarView */,
-				B58406312471653E00DB89F3 /* SecondTab */,
-				EAD7AD43243C3AC600B63AE7 /* MainViewController.swift */,
+				EA4440A7247D28DF002F5D10 /* Cell */,
+				EA4440A6247D28C2002F5D10 /* ViewController */,
+				B58406312471653E00DB89F3 /* Model */,
 				EAD7AD72243C44AB00B63AE7 /* DaumMap.embeddedframework */,
 				EAD7AD3F243C3AC600B63AE7 /* AppDelegate.swift */,
 				EAD7AD41243C3AC600B63AE7 /* SceneDelegate.swift */,
@@ -243,13 +267,6 @@
 				EAD7AD4D243C3ACC00B63AE7 /* Info.plist */,
 				EAD7ADB0243C728C00B63AE7 /* GoogleService-Info.plist */,
 				EAD7ADAF243C608A00B63AE7 /* Groute-Bridging-Header.h */,
-				EA517EF024540D9D00F32E86 /* ViewController.swift */,
-				EA54F51A24541BD500663333 /* TourModel.swift */,
-				EABF08FA2456ACC900519E79 /* MainTableViewCell.swift */,
-				EABF08FC2456C33E00519E79 /* LoginViewController.swift */,
-				EABF08FE2456D8DB00519E79 /* SignupViewController.swift */,
-				B55B679224582804003736D9 /* UserSettingController.swift */,
-				B5DBD26F245C182300BED602 /* SetNicknameViewController.swift */,
 			);
 			path = Groute;
 			sourceTree = "<group>";
@@ -627,7 +644,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B51619AA247F569A006315CD /* SearchCityModel.swift in Sources */,
 				B55B679324582804003736D9 /* UserSettingController.swift in Sources */,
+				B51619A8247F53EF006315CD /* SeachCityCell.swift in Sources */,
 				B584062E2471454700DB89F3 /* SecondTabTableViewCell.swift in Sources */,
 				EABF08FD2456C33E00519E79 /* LoginViewController.swift in Sources */,
 				EAD7AD44243C3AC600B63AE7 /* MainViewController.swift in Sources */,
@@ -635,6 +654,7 @@
 				EAD7AD40243C3AC600B63AE7 /* AppDelegate.swift in Sources */,
 				B5DBD270245C182300BED602 /* SetNicknameViewController.swift in Sources */,
 				EA54F51B24541BD500663333 /* TourModel.swift in Sources */,
+				B51619A6247F4C82006315CD /* SearchViewController.swift in Sources */,
 				EA517EF124540D9D00F32E86 /* ViewController.swift in Sources */,
 				EABF08FB2456ACC900519E79 /* MainTableViewCell.swift in Sources */,
 				EAD7AD42243C3AC600B63AE7 /* SceneDelegate.swift in Sources */,
