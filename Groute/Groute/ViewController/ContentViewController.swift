@@ -37,6 +37,7 @@ class ContentViewController: UIViewController {
             } else {
                 if let title = snapshot?.get("title") as? String {
                     self.titleLabel.text = title
+                    self.navigationItem.title = title
                 }
                 
                 if let memo = snapshot?.get("memo") as? String {
