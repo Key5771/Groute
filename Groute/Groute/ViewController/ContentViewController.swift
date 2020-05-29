@@ -16,7 +16,6 @@ class ContentViewController: UIViewController {
     @IBOutlet weak var userLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     
-    
     var contentId: String = ""
     
     let db = Firestore.firestore()
@@ -26,8 +25,6 @@ class ContentViewController: UIViewController {
         super.viewDidLoad()
 
         getContent()
-//        contentLabel.text = contentId
-        // Do any additional setup after loading the view.
     }
     
     func getContent() {

@@ -30,7 +30,7 @@ class SetNicknameViewController: UIViewController {
                         print("\(document.documentID) => \(document.data())")
                         db.collection("User").document(document.documentID).updateData([
                             "Email": UserDefaults.standard.value(forKey: "savedId")! ,
-                            "Nickname": self.nickTextField.text,
+                            "Nickname": self.nickTextField.text!,
                             "ExistNickname": "true"
                         ]) { err in
                             if let err = err {
