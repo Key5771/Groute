@@ -13,24 +13,27 @@ import FirebaseFirestore
 import Kingfisher
 
 class SecondTabViewController: UIViewController {
-    
     @IBOutlet weak var secondTableview: UITableView!
+    
+    let db = Firestore.firestore()
+    let firebaseAuth = Auth.auth()
+
+    var secondTabList: [SecondTabModel] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         secondTableview.delegate = self
         secondTableview.dataSource = self
     }
-    let db = Firestore.firestore()
-    let firebaseAuth = Auth.auth()
-
-    var secondTabList: [SecondTabModel] = []
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         getDocument()
     }
+    
     func getDocument() {
         db.collection("Test").getDocuments { (querySnapshot, err) in
             if let err = err {

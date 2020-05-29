@@ -18,6 +18,9 @@
 		EA517EF124540D9D00F32E86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA517EF024540D9D00F32E86 /* ViewController.swift */; };
 		EA54F51B24541BD500663333 /* TourModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA54F51A24541BD500663333 /* TourModel.swift */; };
 		EAB3410624810C06009EAF80 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB3410524810C06009EAF80 /* ContentViewController.swift */; };
+		EAB3410A24815347009EAF80 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB3410924815347009EAF80 /* SearchViewController.swift */; };
+		EAB3410C248153D2009EAF80 /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB3410B248153D2009EAF80 /* CityTableViewCell.swift */; };
+		EAB3410E2481552A009EAF80 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB3410D2481552A009EAF80 /* City.swift */; };
 		EABF08FB2456ACC900519E79 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABF08FA2456ACC900519E79 /* MainTableViewCell.swift */; };
 		EABF08FD2456C33E00519E79 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABF08FC2456C33E00519E79 /* LoginViewController.swift */; };
 		EABF08FF2456D8DB00519E79 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABF08FE2456D8DB00519E79 /* SignupViewController.swift */; };
@@ -78,6 +81,9 @@
 		EA517EF024540D9D00F32E86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EA54F51A24541BD500663333 /* TourModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourModel.swift; sourceTree = "<group>"; };
 		EAB3410524810C06009EAF80 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		EAB3410924815347009EAF80 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		EAB3410B248153D2009EAF80 /* CityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
+		EAB3410D2481552A009EAF80 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		EABF08FA2456ACC900519E79 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		EABF08FC2456C33E00519E79 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EABF08FE2456D8DB00519E79 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
@@ -199,6 +205,7 @@
 				EA54F51A24541BD500663333 /* TourModel.swift */,
 				B584062F2471653300DB89F3 /* SecondTabModel.swift */,
 				EA4440A8247D335E002F5D10 /* RouteModel.swift */,
+				EAB3410D2481552A009EAF80 /* City.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -214,6 +221,7 @@
 				EA517EF024540D9D00F32E86 /* ViewController.swift */,
 				EAD7AD43243C3AC600B63AE7 /* MapViewController.swift */,
 				EAB3410524810C06009EAF80 /* ContentViewController.swift */,
+				EAB3410924815347009EAF80 /* SearchViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -223,6 +231,7 @@
 			children = (
 				B584062D2471454700DB89F3 /* SecondTabTableViewCell.swift */,
 				EABF08FA2456ACC900519E79 /* MainTableViewCell.swift */,
+				EAB3410B248153D2009EAF80 /* CityTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -643,6 +652,8 @@
 			files = (
 				B55B679324582804003736D9 /* UserSettingController.swift in Sources */,
 				B584062E2471454700DB89F3 /* SecondTabTableViewCell.swift in Sources */,
+				EAB3410E2481552A009EAF80 /* City.swift in Sources */,
+				EAB3410C248153D2009EAF80 /* CityTableViewCell.swift in Sources */,
 				EABF08FD2456C33E00519E79 /* LoginViewController.swift in Sources */,
 				EAD7AD44243C3AC600B63AE7 /* MapViewController.swift in Sources */,
 				EABF08FF2456D8DB00519E79 /* SignupViewController.swift in Sources */,
@@ -651,6 +662,7 @@
 				B5DBD270245C182300BED602 /* SetNicknameViewController.swift in Sources */,
 				EA54F51B24541BD500663333 /* TourModel.swift in Sources */,
 				EA517EF124540D9D00F32E86 /* ViewController.swift in Sources */,
+				EAB3410A24815347009EAF80 /* SearchViewController.swift in Sources */,
 				EAB3410624810C06009EAF80 /* ContentViewController.swift in Sources */,
 				EABF08FB2456ACC900519E79 /* MainTableViewCell.swift in Sources */,
 				EAD7AD42243C3AC600B63AE7 /* SceneDelegate.swift in Sources */,
