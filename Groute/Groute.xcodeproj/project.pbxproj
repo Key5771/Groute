@@ -206,14 +206,11 @@
 		EA4440A6247D28C2002F5D10 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				EAB3410824812E94009EAF80 /* Login */,
+				EAB3410724812E69009EAF80 /* FirstTab */,
 				B50DA272246E83A400430811 /* SecondTabViewController.swift */,
-				B5DBD26F245C182300BED602 /* SetNicknameViewController.swift */,
 				B55B679224582804003736D9 /* UserSettingController.swift */,
-				EABF08FE2456D8DB00519E79 /* SignupViewController.swift */,
-				EABF08FC2456C33E00519E79 /* LoginViewController.swift */,
-				EA517EF024540D9D00F32E86 /* ViewController.swift */,
 				EAD7AD43243C3AC600B63AE7 /* MapViewController.swift */,
-				EAB3410524810C06009EAF80 /* ContentViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -225,6 +222,25 @@
 				EABF08FA2456ACC900519E79 /* MainTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		EAB3410724812E69009EAF80 /* FirstTab */ = {
+			isa = PBXGroup;
+			children = (
+				EA517EF024540D9D00F32E86 /* ViewController.swift */,
+				EAB3410524810C06009EAF80 /* ContentViewController.swift */,
+			);
+			path = FirstTab;
+			sourceTree = "<group>";
+		};
+		EAB3410824812E94009EAF80 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B5DBD26F245C182300BED602 /* SetNicknameViewController.swift */,
+				EABF08FE2456D8DB00519E79 /* SignupViewController.swift */,
+				EABF08FC2456C33E00519E79 /* LoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		EAD7AD33243C3AC600B63AE7 = {
