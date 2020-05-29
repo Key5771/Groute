@@ -17,6 +17,7 @@
 		EA4440A9247D335E002F5D10 /* RouteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4440A8247D335E002F5D10 /* RouteModel.swift */; };
 		EA517EF124540D9D00F32E86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA517EF024540D9D00F32E86 /* ViewController.swift */; };
 		EA54F51B24541BD500663333 /* TourModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA54F51A24541BD500663333 /* TourModel.swift */; };
+		EAB3410624810C06009EAF80 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB3410524810C06009EAF80 /* ContentViewController.swift */; };
 		EABF08FB2456ACC900519E79 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABF08FA2456ACC900519E79 /* MainTableViewCell.swift */; };
 		EABF08FD2456C33E00519E79 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABF08FC2456C33E00519E79 /* LoginViewController.swift */; };
 		EABF08FF2456D8DB00519E79 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABF08FE2456D8DB00519E79 /* SignupViewController.swift */; };
@@ -76,6 +77,7 @@
 		EA4440A8247D335E002F5D10 /* RouteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteModel.swift; sourceTree = "<group>"; };
 		EA517EF024540D9D00F32E86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EA54F51A24541BD500663333 /* TourModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourModel.swift; sourceTree = "<group>"; };
+		EAB3410524810C06009EAF80 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		EABF08FA2456ACC900519E79 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		EABF08FC2456C33E00519E79 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EABF08FE2456D8DB00519E79 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				EABF08FC2456C33E00519E79 /* LoginViewController.swift */,
 				EA517EF024540D9D00F32E86 /* ViewController.swift */,
 				EAD7AD43243C3AC600B63AE7 /* MainViewController.swift */,
+				EAB3410524810C06009EAF80 /* ContentViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -648,6 +651,7 @@
 				B5DBD270245C182300BED602 /* SetNicknameViewController.swift in Sources */,
 				EA54F51B24541BD500663333 /* TourModel.swift in Sources */,
 				EA517EF124540D9D00F32E86 /* ViewController.swift in Sources */,
+				EAB3410624810C06009EAF80 /* ContentViewController.swift in Sources */,
 				EABF08FB2456ACC900519E79 /* MainTableViewCell.swift in Sources */,
 				EAD7AD42243C3AC600B63AE7 /* SceneDelegate.swift in Sources */,
 				B50DA273246E83A400430811 /* SecondTabViewController.swift in Sources */,

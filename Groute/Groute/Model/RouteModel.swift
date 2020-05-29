@@ -9,11 +9,13 @@
 import Foundation
 
 struct Content {
+    let id: String
     let email: String
     let title: String
     let memo: String
     let timestamp: String
     let imageAddress: String
+    var favorite: Int?
 }
 
 struct Favorite {
