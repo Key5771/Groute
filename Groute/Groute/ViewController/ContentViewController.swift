@@ -20,8 +20,6 @@ class ContentViewController: UIViewController {
     
     let db = Firestore.firestore()
     let firebaseAuth = Auth.auth()
-    
-    var content: [Content] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +46,10 @@ class ContentViewController: UIViewController {
                     self.userLabel.text = user
                 }
                 
-                if let time = snapshot?.get("timestamp") as? String {
+                if let timestamp = snapshot?.get("timestamp") as? Timestamp {
+                    let dateFormat: DateFormatter = DateFormatter()
+                    dateFormat.dateFormat = "yyyy년 MM월 dd일"
+                    let time = dateFormat.string(from: timestamp.dateValue())
                     self.timeLabel.text = time
                 }
             }

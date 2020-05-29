@@ -67,7 +67,7 @@ class ViewController: UIViewController {
                 self.content = []
                 
                 for doc in snapshot!.documents {
-                    let content: Content = Content(id: doc.documentID, email: doc.get("email") as? String ?? "", title: doc.get("title") as? String ?? "", memo: doc.get("memo") as? String ?? "", timestamp: doc.get("timestamp") as? String ?? "", imageAddress: doc.get("imageAddress") as? String ?? "", favorite: 0)
+                    let content: Content = Content(id: doc.documentID, email: doc.get("email") as? String ?? "", title: doc.get("title") as? String ?? "", memo: doc.get("memo") as? String ?? "", timestamp: (doc.get("timestamp") as! Timestamp).dateValue(), imageAddress: doc.get("imageAddress") as? String ?? "", favorite: 0)
                     
                     self.content.append(content)
                 }
@@ -136,7 +136,12 @@ extension ViewController: UITableViewDataSource {
         let url = URL(string: content[indexPath.row].imageAddress)
         cell.locationImageView.kf.setImage(with: url)
         cell.locationName.text = content[indexPath.row].title
-        cell.locationAddress.text = content[indexPath.row].timestamp
+        
+        let dateFormat: DateFormatter = DateFormatter()
+        dateFormat.dateFormat = "yyyy년 MM월 dd일"
+        let time = dateFormat.string(from: content[indexPath.row].timestamp)
+        cell.locationAddress.text = time
+        
 //        cell.favoriteCountLabel.text = "좋아요 \(1)개"
         cell.favoriteCountLabel.text = "좋아요 \(String(describing: content[indexPath.row].favorite ?? 0))개"
         

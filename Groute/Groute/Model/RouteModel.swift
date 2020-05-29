@@ -13,7 +13,7 @@ struct Content {
     let email: String
     let title: String
     let memo: String
-    let timestamp: String
+    let timestamp: Date
     let imageAddress: String
     var favorite: Int?
 }
