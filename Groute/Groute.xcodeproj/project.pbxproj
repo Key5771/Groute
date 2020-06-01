@@ -14,6 +14,7 @@
 		B584062E2471454700DB89F3 /* SecondTabTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584062D2471454700DB89F3 /* SecondTabTableViewCell.swift */; };
 		B58406302471653300DB89F3 /* SecondTabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584062F2471653300DB89F3 /* SecondTabModel.swift */; };
 		B5DBD270245C182300BED602 /* SetNicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DBD26F245C182300BED602 /* SetNicknameViewController.swift */; };
+		EA3ABE20248511B500ACDFF3 /* AddRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3ABE1F248511B500ACDFF3 /* AddRouteViewController.swift */; };
 		EA4440A9247D335E002F5D10 /* RouteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4440A8247D335E002F5D10 /* RouteModel.swift */; };
 		EA517EF124540D9D00F32E86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA517EF024540D9D00F32E86 /* ViewController.swift */; };
 		EA54F51B24541BD500663333 /* TourModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA54F51A24541BD500663333 /* TourModel.swift */; };
@@ -77,6 +78,7 @@
 		B584062D2471454700DB89F3 /* SecondTabTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTabTableViewCell.swift; sourceTree = "<group>"; };
 		B584062F2471653300DB89F3 /* SecondTabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTabModel.swift; sourceTree = "<group>"; };
 		B5DBD26F245C182300BED602 /* SetNicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNicknameViewController.swift; sourceTree = "<group>"; };
+		EA3ABE1F248511B500ACDFF3 /* AddRouteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRouteViewController.swift; sourceTree = "<group>"; };
 		EA4440A8247D335E002F5D10 /* RouteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteModel.swift; sourceTree = "<group>"; };
 		EA517EF024540D9D00F32E86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EA54F51A24541BD500663333 /* TourModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourModel.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				EAD7AD43243C3AC600B63AE7 /* MapViewController.swift */,
 				EAB3410524810C06009EAF80 /* ContentViewController.swift */,
 				EAB3410924815347009EAF80 /* SearchViewController.swift */,
+				EA3ABE1F248511B500ACDFF3 /* AddRouteViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -662,6 +665,7 @@
 				B5DBD270245C182300BED602 /* SetNicknameViewController.swift in Sources */,
 				EA54F51B24541BD500663333 /* TourModel.swift in Sources */,
 				EA517EF124540D9D00F32E86 /* ViewController.swift in Sources */,
+				EA3ABE20248511B500ACDFF3 /* AddRouteViewController.swift in Sources */,
 				EAB3410A24815347009EAF80 /* SearchViewController.swift in Sources */,
 				EAB3410624810C06009EAF80 /* ContentViewController.swift in Sources */,
 				EABF08FB2456ACC900519E79 /* MainTableViewCell.swift in Sources */,
