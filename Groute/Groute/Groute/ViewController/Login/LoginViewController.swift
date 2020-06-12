@@ -44,7 +44,7 @@ class LoginViewController: UIViewController {
                 docRef.getDocument { (document, error) in
                     if let document = document, document.exists {
                         let hasNick = document.get("ExistNickname")
-                        print("Document data: \(hasNick)")
+                        print("Document data: \(String(describing: hasNick))")
                         if hasNick as? String == "true" {
                             let viewController: UIViewController = self.storyboard!.instantiateViewController(withIdentifier: "navigation")
                             viewController.modalPresentationStyle = .overFullScreen
