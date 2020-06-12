@@ -11,6 +11,7 @@
 		1D6983940A3AEF0E34F8CDDE /* Pods_GrouteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05BCDCC47B52B47F23CE80D6 /* Pods_GrouteTests.framework */; };
 		B50DA273246E83A400430811 /* SecondTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50DA272246E83A400430811 /* SecondTabViewController.swift */; };
 		B55B679324582804003736D9 /* UserSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55B679224582804003736D9 /* UserSettingController.swift */; };
+		B56C114924935A110036B36F /* ContentRouteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56C114824935A110036B36F /* ContentRouteTableViewCell.swift */; };
 		B584062E2471454700DB89F3 /* SecondTabTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584062D2471454700DB89F3 /* SecondTabTableViewCell.swift */; };
 		B58406302471653300DB89F3 /* SecondTabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584062F2471653300DB89F3 /* SecondTabModel.swift */; };
 		B5DBD270245C182300BED602 /* SetNicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DBD26F245C182300BED602 /* SetNicknameViewController.swift */; };
@@ -71,6 +72,7 @@
 		A53CE80052D854CDFED1155A /* Pods-GrouteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrouteTests.debug.xcconfig"; path = "Target Support Files/Pods-GrouteTests/Pods-GrouteTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B50DA272246E83A400430811 /* SecondTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTabViewController.swift; sourceTree = "<group>"; };
 		B55B679224582804003736D9 /* UserSettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingController.swift; sourceTree = "<group>"; };
+		B56C114824935A110036B36F /* ContentRouteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentRouteTableViewCell.swift; sourceTree = "<group>"; };
 		B584062D2471454700DB89F3 /* SecondTabTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTabTableViewCell.swift; sourceTree = "<group>"; };
 		B584062F2471653300DB89F3 /* SecondTabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTabModel.swift; sourceTree = "<group>"; };
 		B5DBD26F245C182300BED602 /* SetNicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNicknameViewController.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 			children = (
 				B584062D2471454700DB89F3 /* SecondTabTableViewCell.swift */,
 				EABF08FA2456ACC900519E79 /* MainTableViewCell.swift */,
+				B56C114824935A110036B36F /* ContentRouteTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -664,6 +667,7 @@
 				EABF08FF2456D8DB00519E79 /* SignupViewController.swift in Sources */,
 				EA4440A9247D335E002F5D10 /* RouteModel.swift in Sources */,
 				EAD7AD40243C3AC600B63AE7 /* AppDelegate.swift in Sources */,
+				B56C114924935A110036B36F /* ContentRouteTableViewCell.swift in Sources */,
 				B5DBD270245C182300BED602 /* SetNicknameViewController.swift in Sources */,
 				EA54F51B24541BD500663333 /* TourModel.swift in Sources */,
 				EA517EF124540D9D00F32E86 /* ViewController.swift in Sources */,
