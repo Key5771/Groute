@@ -10,8 +10,9 @@ import Foundation
 
 
 struct TourModel {
-    var address: String?
-    var imageAddress: String?
-    var name: String?
-    var roadAddress: String?
+    let id: String
+    let address: String
+    let imageAddress: String
+    let name: String
+    let roadAddress: String
 }

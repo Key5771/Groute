@@ -1,5 +1,5 @@
 //
-//  AddRouteTableViewCell.swift
+//  RouteListTableViewCell.swift
 //  Groute
 //
 //  Created by 김기현 on 2020/06/02.
@@ -8,9 +8,10 @@
 
 import UIKit
 
-class AddRouteTableViewCell: UITableViewCell {
-    @IBOutlet weak var locationLabel: UILabel!
-    @IBOutlet weak var addRouteButton: UIButton!
+class RouteListTableViewCell: UITableViewCell {
+    @IBOutlet weak var locationImageView: UIImageView!
+    @IBOutlet weak var locationNameLabel: UILabel!
+    @IBOutlet weak var locationAddressLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

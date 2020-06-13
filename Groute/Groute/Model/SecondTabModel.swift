@@ -7,11 +7,12 @@
 //
 
 import Foundation
-
+import Firebase
 
 struct SecondTabModel {
-    var Time: String?
-    var address: String?
-    var imageAddress: String?
+    let Time: String?
+    let address: String?
+    let imageAddress: String?
+    let point: GeoPoint
 }
 

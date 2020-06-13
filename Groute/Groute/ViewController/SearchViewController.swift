@@ -37,7 +37,8 @@ class SearchViewController: UIViewController {
                 print("Error getting CityName: \(err)")
             } else {
                 for document in snapshot!.documents {
-                    let city: City = City(cityName: document.get("cityName") as? String ?? "", cityEtc: document.get("cityEtc") as? String ?? "", cityImage: document.get("cityImage") as? String ?? "")
+                    let city: City = City(cityName: document.get("cityName") as? String ?? "", cityEtc: document.get("cityEtc") as? String ?? "", cityImage: document.get("cityImage") as? String ?? "", point: document.get("geopoint") as? GeoPoint ?? GeoPoint(latitude: 0, longitude: 0) )
+                    print("city: \(city)")
                     
                     self.cityName.append(city)
                 }
@@ -54,6 +55,12 @@ class SearchViewController: UIViewController {
         if segue.identifier == "city" {
             if let row = tableView.indexPathForSelectedRow {
                 let vc = segue.destination as? AddRouteViewController
+                
+                if searchBar.text != "" {
+                    vc?.point = filteredCityName[row.row].point
+                } else {
+                    vc?.point = cityName[row.row].point
+                }
                 
                 tableView.deselectRow(at: row, animated: true)
             }

@@ -7,9 +7,11 @@
 //
 
 import Foundation
+import Firebase
 
 struct City {
     let cityName: String
     let cityEtc: String
     let cityImage: String
+    let point: GeoPoint
 }

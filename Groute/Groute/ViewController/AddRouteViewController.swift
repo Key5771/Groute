@@ -7,23 +7,26 @@
 //
 
 import UIKit
+import Firebase
 
 class AddRouteViewController: UIViewController {
-    @IBOutlet weak var dateTextfield: UITextField!
+    @IBOutlet weak var startTextField: UITextField!
+    @IBOutlet weak var finishTextField: UITextField!
     @IBOutlet weak var pickerView: UIDatePicker!
     @IBOutlet weak var innerView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
     var mapView: MTMapView?
     var cellCount: Int = 0
-    
-    // Jeju National University Point
-    let mapPoint: MTMapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: 33.457856, longitude: 126.561679))
-    // Jeju City Hall
-    let mapPoint2: MTMapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: 33.499598, longitude:  126.531259))
+    var point: GeoPoint = GeoPoint(latitude: 0, longitude: 0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Jeju National University Point
+        let mapPoint: MTMapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: point.latitude, longitude: point.longitude))
+        // Jeju City Hall
+        let mapPoint2: MTMapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: 33.499598, longitude:  126.531259))
         
         pickerView.isHidden = true
         
@@ -31,35 +34,75 @@ class AddRouteViewController: UIViewController {
         tableView.dataSource = self
         
         innerView.backgroundColor = UIColor.gray
-        innerView.addSubview(loadKakaoMap())
+        innerView.addSubview(loadKakaoMap(point: mapPoint, point2: mapPoint2))
 //        loadKakaoMap()
+        
     }
     
-    @IBAction func selectDate(_ sender: Any) {
+    @IBAction func selectStartDate(_ sender: Any) {
         pickerView.isHidden = false
-        createDatePicker()
+        createStartDatePicker()
+    }
+    @IBAction func selectFinishDate(_ sender: Any) {
+        pickerView.isHidden = false
+        createFinishDatePicker()
     }
     
-    func createDatePicker() {
+    // MARK: - StartTextField
+    func createStartDatePicker() {
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
         let doneButton = UIBarButtonItem(title: "완료", style: .done, target: self, action: #selector(AddRouteViewController.doneClick))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "취소", style: .plain, target: self, action: #selector(AddRouteViewController.startCancelClick))
         
-        toolbar.setItems([doneButton], animated: false)
+        toolbar.setItems([cancelButton, spaceButton, doneButton], animated: false)
         toolbar.isUserInteractionEnabled = true
-        dateTextfield.inputAccessoryView = toolbar
-        dateTextfield.inputView = pickerView
+        startTextField.inputAccessoryView = toolbar
+        startTextField.inputView = pickerView
     }
     
     @objc func doneClick() {
         let dateFormatter: DateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy년 MM월 dd일"
         let selectedDate: String = dateFormatter.string(from: pickerView.date)
-        dateTextfield.text = selectedDate
-        dateTextfield.resignFirstResponder()
+        startTextField.text = selectedDate
+        startTextField.resignFirstResponder()
+        pickerView.isHidden = true
+        tableView.reloadData()
     }
     
+    @objc func startCancelClick() {
+        startTextField.resignFirstResponder()
+    }
     
+    // MARK: - FinishTextField
+    func createFinishDatePicker() {
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        let doneButton = UIBarButtonItem(title: "완료", style: .done, target: self, action: #selector(AddRouteViewController.finishDoneClick))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "취소", style: .plain, target: self, action: #selector(AddRouteViewController.finishCancelClick))
+        
+        toolbar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolbar.isUserInteractionEnabled = true
+        finishTextField.inputAccessoryView = toolbar
+        finishTextField.inputView = pickerView
+    }
+    
+    @objc func finishDoneClick() {
+        let dateFormatter: DateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy년 MM월 dd일"
+        let selectedDate: String = dateFormatter.string(from: pickerView.date)
+        finishTextField.text = selectedDate
+        finishTextField.resignFirstResponder()
+        pickerView.isHidden = true
+        tableView.reloadData()
+    }
+    
+    @objc func finishCancelClick() {
+        finishTextField.resignFirstResponder()
+    }
     
     
     /*
@@ -76,14 +119,16 @@ class AddRouteViewController: UIViewController {
 
 extension AddRouteViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
-            return "5월 11일"
+            return startTextField.text
         } else if section == 1 {
-            return "5월 12일"
+            return finishTextField.text
+        } else if section == 2 {
+            return "장소추가"
         }
         
         return nil
@@ -94,6 +139,8 @@ extension AddRouteViewController: UITableViewDataSource {
             cellCount = 1
         } else if section == 1 {
             cellCount = 1
+        } else if section == 2 {
+            cellCount = 1
         }
         
         return cellCount
@@ -102,10 +149,16 @@ extension AddRouteViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "route", for: indexPath) as! AddRouteTableViewCell
         
+        cell.addRouteButton.isHidden = true
+        
         if indexPath.section == 0 {
             cell.locationLabel.text = "제주대학교"
         } else if indexPath.section == 1 {
             cell.locationLabel.text = "제주시청"
+        } else if indexPath.section == 2 {
+            if cell.locationLabel.text == "" {
+                cell.addRouteButton.isHidden = false
+            }
         }
         
         return cell
@@ -122,39 +175,39 @@ extension AddRouteViewController: UITableViewDelegate {
 
 extension AddRouteViewController: MTMapViewDelegate {
     
-    func createMarker() -> [MTMapPOIItem] {
+    func createMarker(point mapPoint: MTMapPoint, point2 mapPoint2: MTMapPoint) -> [MTMapPOIItem] {
         let positionItem = MTMapPOIItem()
         positionItem.itemName = "제주대학교"
         positionItem.mapPoint = mapPoint
         positionItem.markerType = .bluePin
         positionItem.markerSelectedType = .bluePin
         positionItem.tag = 0
-        
+
         let positionItem2 = MTMapPOIItem()
         positionItem2.itemName = "제주시청"
         positionItem2.mapPoint = mapPoint2
         positionItem2.markerType = .bluePin
         positionItem2.markerSelectedType = .bluePin
         positionItem2.tag = 1
-        
+
         return [positionItem, positionItem2]
     }
-    
-    func createPolyline() -> MTMapPolyline {
+
+    func createPolyline(point mapPoint: MTMapPoint, point2 mapPoint2: MTMapPoint) -> MTMapPolyline {
         let polyLine = MTMapPolyline()
         polyLine.addPoints([mapPoint, mapPoint2])
-        
+
         return polyLine
     }
     
-    func loadKakaoMap() -> MTMapView {
+    func loadKakaoMap(point mapPoint: MTMapPoint, point2 mapPoint2: MTMapPoint) -> MTMapView {
         mapView = MTMapView(frame: CGRect(x: 0, y: 0, width: self.innerView.frame.width, height: self.innerView.frame.height))
         guard let mapView = mapView else { return MTMapView.init() }
         
         mapView.delegate = self
         
         // Center Point
-        mapView.setMapCenter(mapPoint2, animated: true)
+        mapView.setMapCenter(mapPoint, animated: true)
         // Zoom To
         mapView.setZoomLevel(4, animated: true)
         mapView.baseMapType = .standard
@@ -162,8 +215,8 @@ extension AddRouteViewController: MTMapViewDelegate {
         print("Marker: \(mapView.showCurrentLocationMarker)")
         mapView.currentLocationTrackingMode = .onWithoutHeading
         
-        mapView.addPOIItems(createMarker())
-        mapView.addPolyline(createPolyline())
+        mapView.addPOIItems(createMarker(point: mapPoint, point2: mapPoint2))
+        mapView.addPolyline(createPolyline(point: mapPoint, point2: mapPoint2))
         
         return mapView
     }
