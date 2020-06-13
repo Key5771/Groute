@@ -18,6 +18,7 @@ class ContentViewController: UIViewController {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var routeTable: UITableView!
     @IBOutlet weak var routeReviewCollectionView: UICollectionView!
+    @IBOutlet weak var reviewCount: UILabel!
     
     var contentId: String = ""
 
@@ -65,6 +66,7 @@ class ContentViewController: UIViewController {
                     print(self.review)
                 }
                 self.routeReviewCollectionView.reloadData()
+                self.reviewCount.text = "(\(self.review.count))"
             }
         }
     }
